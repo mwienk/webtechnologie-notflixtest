@@ -8,6 +8,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 public class MyResourceConfig extends ResourceConfig {
 
 	public MyResourceConfig() {
+		System.out.println("Config loaded");
 		packages("resources");
 		register(com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider.class);
 	}
