@@ -1,5 +1,6 @@
 package model;
 
+
 public class Movie {
 	private int internFollowNumber;
 	private String IMDBttNumber;
@@ -8,6 +9,8 @@ public class Movie {
 	private int lengthInMinutes;
 	private String director;
 	private String description;
+	private int totalVotes;
+	private int totalStars;
 	
 	public Movie() {
 	
@@ -52,7 +55,31 @@ public class Movie {
 	public String getDescription() {
 		return description;
 	}
-	
-	
+
+	public int getTotalVotes() {
+		return totalVotes;
+	}
+
+	public void setTotalVotes(int totalVotes) {
+		this.totalVotes = totalVotes;
+	}
+
+	public int getTotalStars() {
+		return totalStars;
+	}
+
+	public void setTotalStars(int totalStars) {
+		this.totalStars = totalStars;
+	}
+
+	public void addStars(int stars) {
+		this.totalVotes++;
+		this.totalStars += stars;
+	}
+
+	public void removeStars(int stars) {
+		this.totalVotes--;
+		this.totalStars -= stars;
+	}
 
 }

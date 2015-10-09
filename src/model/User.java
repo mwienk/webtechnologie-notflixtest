@@ -1,5 +1,12 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@XmlRootElement
 public class User {
 	private String lastName;
 	private String firstName;
@@ -17,6 +24,7 @@ public class User {
 		this.passWord = passWord;
 	}
 
+	@XmlAttribute
 	public String getLastName() {
 		return lastName;
 	}
@@ -25,6 +33,7 @@ public class User {
 		this.lastName = lastName;
 	}
 
+	@XmlAttribute
 	public String getFirstName() {
 		return firstName;
 	}
@@ -33,6 +42,7 @@ public class User {
 		this.firstName = firstName;
 	}
 
+	@XmlAttribute
 	public String getNickName() {
 		return nickName;
 	}
@@ -41,6 +51,8 @@ public class User {
 		this.nickName = nickName;
 	}
 
+	@XmlTransient
+	@JsonIgnore
 	public String getPassWord() {
 		return passWord;
 	}
@@ -48,5 +60,5 @@ public class User {
 	public void setPassWord(String passWord) {
 		this.passWord = passWord;
 	}
-
+	
 }

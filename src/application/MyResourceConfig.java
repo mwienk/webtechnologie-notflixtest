@@ -9,6 +9,7 @@ public class MyResourceConfig extends ResourceConfig {
 
 	public MyResourceConfig() {
 		packages("resources");
+		register(com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider.class);
 	}
 	
 }

@@ -1,26 +1,22 @@
 package model;
 
 public class Rating {
-	private double stars;
+	private int stars;
 	
 	public Rating() {
 		
 	}
 
-	public Rating(double stars) {
-		super();
+	public Rating(int stars) {
 		this.stars = stars;
 	}
 
-	public double getStars() {
+	public int getStars() {
 		return stars;
 	}
 
-	public void setStars(double stars) {
+	public void setStars(int stars) {
 		this.stars = stars;
 	}
-	
-	
-	
 	
 }
