@@ -20,7 +20,7 @@ public class StringResource {
 	public String returnString(){
 		Model model = (Model) context.getAttribute("model");
 		
-		return model.toString();
+		return model.getMovies().get(0).getDirector();
 	}
 	
 

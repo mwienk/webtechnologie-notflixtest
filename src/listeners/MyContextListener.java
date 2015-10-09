@@ -10,7 +10,7 @@ public class MyContextListener implements ServletContextListener {
 
 	@Override
 	public void contextDestroyed(ServletContextEvent event) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -18,8 +18,6 @@ public class MyContextListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent event) {
 		System.out.println("Context Initialized");
 		event.getServletContext().setAttribute("model", new Model());
-		System.out.println();
-		
 	}
 
 }
